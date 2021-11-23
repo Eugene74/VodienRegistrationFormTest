@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+  <!--       <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+           &lt;!&ndash;        <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n </pattern>       &ndash;&gt;
+                    &lt;!&ndash;           =%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n               &ndash;&gt;
+                <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{20}:%L - %msg%n</pattern>
+
+        </encoder>
+    </appender>-->
+<!--
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>slf4jlogbackexample.log</file>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            &lt;!&ndash;                   daily rollover                &ndash;&gt;
+            <fileNamePattern>slf4jlogbackexample.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            &lt;!&ndash;                  Храним файлы логов 10 дней                &ndash;&gt;
+            <maxHistory>10</maxHistory>
+
+            &lt;!&ndash;                Максимальный размер файлов лога 30 гигабайт               &ndash;&gt;
+            <totalSizeCap>5GB</totalSizeCap>
+
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level  %logger{20}:%L - %msg%n</pattern>
+        </encoder>
+    </appender>        -->
+
+    <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>Address_checkLogFile.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} [%thread] %-5level  %logger{20}:%L - %msg%n</pattern>
+        </encoder>
+    </appender>
+   <!--                 <logger name="fieldsaddress" level="debug"/>                   -->
+
+    <root level="INFO">
+       <!--  <appender-ref ref="STDOUT" />-->
+      <!--                <appender-ref ref="FILE" />               -->
+        <appender-ref ref="fileAppender" />
+    </root>
+</configuration>

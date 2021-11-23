@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="fields_validation_test">
+
+    <test name="Address_check" >
+        <classes>
+            <class name="fieldsvalidationtests.Address_check"></class>
+        </classes>
+    </test>
+   <!-- <test name="Email_check" >
+        <classes>
+            <class name="fieldsvalidation.Email_check"></class>
+        </classes>
+    </test>
+    <test name="City_check" >
+        <classes>
+            <class name="fieldsvalidation.City_check"></class>
+        </classes>
+    </test>
+    <test name="FirstName_check" >
+        <classes>
+            <class name="fieldsvalidation.FirstName_check"></class>
+        </classes>
+    </test>
+    <test name="LastName_check" >
+        <classes>
+            <class name="fieldsvalidation.LastName_check"></class>
+        </classes>
+    </test>
+    <test name="Password_check" >
+        <classes>
+            <class name="fieldsvalidation.Password_check"></class>
+        </classes>
+    </test>
+    <test name="Phone_check" >
+        <classes>
+            <class name="fieldsvalidation.Phone_check"></class>
+        </classes>
+    </test>
+    <test name="Postcode_check" >
+        <classes>
+            <class name="fieldsvalidation.Postcode_check"></class>
+        </classes>
+    </test>
+    <test name="Username_check" >
+        <classes>
+            <class name="fieldsvalidation.Username_check"></class>
+        </classes>
+    </test>-->
+</suite>
