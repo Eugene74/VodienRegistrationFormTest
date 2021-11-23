@@ -1,6 +1,7 @@
 package basepackage;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,20 +16,29 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     public WebDriver driver;
     public RegistrationPage registrationPage;
-    protected final Properties config = Config.loadProperties("D:\\Java\\AllProgram\\VodienRegisterTest\\src\\test\\resources\\test.properties");
+  //  protected final Properties config = Config.loadProperties("D:\\Java\\AllProgram\\VodienRegisterTest\\src\\test\\resources\\test.properties");
 
     @BeforeTest
     public void setup(){
 
-        System.setProperty("webdriver.chrome.driver", config.getProperty("chromedriver"));
-        driver = new ChromeDriver();
-       // driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-      //  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // явное ожидание
+   //     System.setProperty("webdriver.chrome.driver", config.getProperty("chromedriver"));
+  //      driver = new ChromeDriver();
+                   // driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+  //      driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+                      //  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+  //      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // явное ожидание
 
+  //      driver.manage().window().maximize();
+   //     driver.get("https://www.vodien.com.au/register"      /*config.getProperty("registration_url") */  );
+
+// bonigarcia
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("https://www.vodien.com.au/register"      /*config.getProperty("registration_url") */  );
+
     }
 
     @AfterTest

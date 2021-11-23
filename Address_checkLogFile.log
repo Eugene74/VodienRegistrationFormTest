@@ -55,3 +55,8 @@ java.lang.IllegalStateException: cannot be started once stopped
 23.11.2021 15:30:53.627 [main] INFO   f.Address_check:84 - was expecting an error message because not valid field value: فحص.
 23.11.2021 15:30:59.423 [main] INFO   f.Address_check:47 - checkNameField_positive: {}.false , value: Ivan
 23.11.2021 15:31:05.179 [main] INFO   f.Address_check:47 - checkNameField_positive: {}.false , value: abc_12_def 12, kv 123
+23.11.2021 16:05:09.146 [main] INFO   i.g.b.w.WebDriverManager:615 - Using chromedriver 96.0.4664.45 (since Google Chrome 96 is installed in your machine)
+23.11.2021 16:05:09.165 [main] INFO   i.g.b.w.WebDriverManager:1077 - Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+23.11.2021 16:05:09.566 [main] INFO   i.g.b.wdm.Downloader:128 - Downloading https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_win32.zip
+23.11.2021 16:05:10.114 [main] INFO   i.g.b.wdm.Downloader:183 - Extracting binary from compressed file chromedriver_win32.zip
+23.11.2021 16:05:10.199 [main] INFO   i.g.b.w.WebDriverManager:1113 - Exporting webdriver.chrome.driver as C:\Users\ea74\.m2\repository\webdriver\chromedriver\win32\96.0.4664.45\chromedriver.exe
